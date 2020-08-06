@@ -18,7 +18,7 @@ public class JiraTest {
       //login scenario
       
     SessionFilter session=new SessionFilter();
-    String response=given().header("Content-Type","application/json").body("{ \"username\": \"admin\", \"password\": \"admin\" }")
+    String response=given().relaxedHTTPSValidation().header("Content-Type","application/json").body("{ \"username\": \"admin\", \"password\": \"admin\" }")
      .log().all().filter(session).when().post("rest/auth/1/session").then().log().all().extract().response().asString();
 	
     
