@@ -1,20 +1,28 @@
 package files;
 import static io.restassured.RestAssured.given;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import pojo.Api;
 import pojo.GetCourse;
+import pojo.WebAutomation;
 
 public class oAuthTest {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		String[] courseTitle= {"Selenium Webdriver java","cypress","protractor"};
 		// TODO Auto-generated method stub
 		//Selenium code to get code
 		//System.setProperty("webdriver.gecko.driver","C:\\Users\\kusuma\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe");
@@ -63,6 +71,27 @@ public class oAuthTest {
 		
 		System.out.println(gc.getLinkedin());
 		System.out.println(gc.getInstructors());
+		System.out.println(gc.getCourses().getApi().get(1).getCourseTitle());
+		
+		List<Api> apicourses=gc.getCourses().getApi();
+		for(int i=0;i<apicourses.size();i++)
+		{
+		      if(apicourses.get(1).getCourseTitle().equalsIgnoreCase("soupUI webservices testing"))
+		      {
+		    	  System.out.println(apicourses.get(i).getPrice());
+		      }
+		}
+		
+		//get course names of web automation
+		ArrayList<String> a = new ArrayList<String>();
+		List<WebAutomation> w=gc.getCourses().getWeAutomation();
+		for(int j=0;j<w.size();j++)
+		{
+			a.add(w.get(j).getCourseTitle());
+		}
+		
+		List<String> expectedList=Arrays.asList(courseTitle);
+		Assert.assertTrue(a.equals(expectedList));
         //System.out.println(response);
 	}
 
