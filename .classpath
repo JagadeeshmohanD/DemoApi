@@ -82,5 +82,9 @@
 	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/selenium-java-3.141.59/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/selenium-java-3.141.59/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/jackson-core-2.11.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/jackson-annotations-2.11.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kusuma/Downloads/jackson-databind-2.11.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
