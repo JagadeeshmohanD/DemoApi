@@ -41,7 +41,7 @@ public class oAuthTest {
 //		 driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Keys.ENTER);
 //		 Thread.sleep(4000);
 		//String url= driver.getCurrentUrl();
-		String url="https://rahulshettyacademy.com/getCourse.php?state=verifyfjdss&code=4%2F2wEtC-QP5Zu-2jutt9szwpQ2cyqfiEmx88vO0rF5UselRBkljR_lFnoADrNADGv12_GnboqfqK8sEkrvIzQyWiY&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent#";
+		String url="https://rahulshettyacademy.com/getCourse.php?state=verifyfjdss&code=4%2F2wFQdkoSz-uF04pEWHO0RxEeRvkUB5JvRBJnDkUmccggGbH_mf3hEjstNhBK_m8bFRxKLEgwWVT4jvJUFI1kMXU&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent#";
 		String partialcode=url.split("code=")[1];
 		String code=partialcode.split("&scope")[0];
 		System.out.println(code);
